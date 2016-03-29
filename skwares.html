@@ -1,0 +1,81 @@
+<!-- ---------------------- S K W A R E S -----------------------
+****         Bookmarks, arranged as square icons in tabs   *****
+-----------------------------------------------------------------
+
+
+Éric Viala, Paris, march 2016
+This page belongs to an extension but *is not* a background page.
+However scripts called from here do see the whole browser API
+
+nb : "skware" is of course pronounced as "square"
+-->
+
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8">
+
+<head>
+<title>Skwares</title>
+<meta
+	http-equiv="content-type"
+	content="text/html;charset=utf-8" />
+	
+<!--  jQuery and jQuery UI -->	
+<script src="jquery-ui/external/jquery/jquery.js"></script>
+<script src="jquery-ui/jquery-ui.js"></script>
+<link
+	rel="stylesheet"
+	href="jquery-ui/jquery-ui.css">
+
+<!-- the following is a jQuery extension to handle right-click -->
+<script src="jquery-ui-contextmenu/jquery.ui-contextmenu.min.js"></script>
+
+<!--  our stuff -->
+<script src="indexedDB.js"></script>
+<script src="skwares.js"></script>
+<link rel="stylesheet" href="skwares.css">
+
+</head>
+
+<body>
+	<h1>Bookmarks, arranged as square icons in tabs</h1>
+
+	<div id="mainSkware">
+		<img src='icons/spinner.gif'></img>
+	</div>
+
+
+<!-- ===========================================================================
+		The following section is where we define various dialogs
+=========================================================================== -->
+
+<!-- Confirm delete -->
+<div id='dlg-confirm-del' title='Confirm deletion' class="dlg">You sure ?</div>
+
+<!-- Edit the skware properties -->
+	<div
+		id="dlg-edit"
+		title="Edit title"
+		 class="dlg">
+		<form>
+		<label for="title">Title</label>
+		<input
+			type="text"
+			name="title"
+			id="dlg-title">
+
+
+		<!-- Allow form submission with keyboard without duplicating the dialog button -->
+			<input
+				type="submit"
+				tabindex="-1"
+				style="position: absolute; top: -1000px">
+		</form>
+	</div>
+
+
+<!-- ========================= end dialogs ================================= -->
+
+</body>
+</html>

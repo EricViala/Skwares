@@ -1,0 +1,24 @@
+- Implement undelete.
+
+- Manage tabs : create, update, delete, re-arrange: drag+drop
+
+- style, style style
+
+- hide pop-up menu when leaving skware without acting
+
+- port to Firefox
+
+- make it react to bookmark operations done through the buil-in Chrome
+tools
+
+- i18n
+
+- thumbnails à la Chrome New Tab
+
+- do we really need to embed the whole jQuery (ui(context-menu)) ?
+
+- search
+
+- align / snap to grid
+
+- contain variables spillage to global
