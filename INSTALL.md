@@ -1,4 +1,13 @@
-You'll need to grab your own copy of jQuery UI and jquery-context-menu, after which your tree should look like 
+(view this file as "Raw" for correct layout of tree)
+
+
+You'll need to grab your own copy of jQuery UI and jquery.ui-contextmenu.min.js, after which your tree should look like shown below.
+
+Quick downloads:
+    jQuery base + UI http://jqueryui.com/resources/download/jquery-ui-1.11.4.zip
+    https://cdnjs.cloudflare.com/ajax/libs/jquery.ui-contextmenu/1.11.0/jquery.ui-contextmenu.min.js
+
+
     .
     ├── background.js
     ├── icons
