@@ -5,17 +5,18 @@ var openCustomBookmarksTab = function() {
         function(results) {
             if (results.length === 0) { //create new tab
                 chrome.tabs.create({
-                        "url": chrome.extension.getURL("skwares.html")
-                    },
-                    function(tab) {
-                        tab.highlighted = true;
-                        tab.active = true;
-                        tab.pinned = true;
+                        "url": chrome.extension.getURL("skwares.html"),
+                        "index":0,
+                        "active": true,
+                        "pinned":true
                     });
-            } else { // existing one
-                results[0].highlighted = true;
-                results[0].active = true;
-                results[0].pinned = true;
+            } else {
+				chrome.tabs.move(results[0].id, {index:0});
+				chrome.tabs.update(results[0].id, {
+					active:true,
+					pinned:true,
+					highlighted:true
+				});
             }
         }
     ); // done querying tabs and creating a new one if needed
